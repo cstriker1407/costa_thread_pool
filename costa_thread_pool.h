@@ -37,8 +37,6 @@ int costa_init( unsigned int (*sys_get_time_ms)(void),           //获取当前�
                 void (*costa_job_event_cb)(void (*costa_job_cb)(void *p_param), COST_JOB_EVENT event) //内存池状态回调, nolock!!!
                 );
 
-//线程池执行任务定义
-typedef void (*costa_job_cb)(void *p_param);
 /* 添加一个任务 */
 int costa_add_job(void (*costa_job_cb)(void *p_param), void *p_param);
 
